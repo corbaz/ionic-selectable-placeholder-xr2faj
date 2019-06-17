@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Ionic Selectable v3</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<ion-item>
+		<ion-label text-wrap>
+			julio.corbaz@gmail.com
+		</ion-label>
+	</ion-item>
+	<ion-item>
+		<ion-label>Port</ion-label>
+		<ionic-selectable #portComponent item-content [(ngModel)]="port" itemValueField="id" itemTextField="name" [items]="ports"
+		 placeholder="Port">
+		</ionic-selectable>
+	</ion-item>
+	<ion-item>
+		<button ion-button (click)="portComponent.clear()">
+      Clear
+    </button>
+  </ion-item>
+</ion-content>
